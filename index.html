@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>~Alex's Trivia Game~</title>
+  <!-- CSS reset sheet --> 
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/reset.css">
+  <!-- current version of bootstrap --> 
+  <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css” integrity=“sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ” crossorigin=“anonymous”>
+  <!-- themed bootstrap sheet --> 
+  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/lumen/bootstrap.min.css">
+  <!-- my stylesheet -->
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+  <!-- adding in jquery --> 
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <!-- adding in bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- my js game file -->
+  <script src="Assets/javascript/app.js"></script>
+  <!-- Icons file -->
+  <script src="https://use.fontawesome.com/c8b6d2fc87.js"></script>
+</head>
+
+
+<body>
+<!-- Header section with jumbotron and nav bar, where nav is for gameplay -->
+<div id="header-section">
+	<div class="jumbotron">
+    <div class="text-center"><i class="fa fa-question-circle-o fa-5x" style="Color:#ffa500;"></i></div>
+		<h1 class="text-center" id="pagetitle"><strong>Trivia Game</strong></h1>
+		<h3 class="text-center">See how many questions you can get right in the time allowed.</h3>
+    <br/>
+    <center><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">How It Works</button></center>
+	</div>
+</div>
+
+<!-- How it works Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">How The Game Works</h4>
+      </div>
+        <div class="modal-body">
+          <p>You will be given 30 seconds to answer each questions. Once you select an answer, you will be shown if you were right or wrong. 
+          <br/><br/>
+          The game will count how many right and wrong answers you get. At the end of all the questions, you will be shown your score and given the option to start the game over. 
+          <br/><br/>
+          That's it! 
+          </p>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- main div containing the game page elements --> 
+<div id="game-section">
+
+<!-- first row full width showing the guesses you have made --> 
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-info">
+              <div class="panel-heading">
+              <h3 class="panel-title" style="text-align: center;">Trivia Questions</h3>
+              </div>
+                <div class="panel-body">
+                <div class="text-center question">Time Remaining:<div id="questiontimer" class="timeremainingclass">Ready, set, go...</div></div>
+                <hr/>
+                <div class="text-center" id="question">First question here...</div>
+                <br/>
+                <div class="text-center" id="questionans1">First answer here...</div>
+                <br/>
+                <div class="text-center" id="questionans2">2 answer here...</div>
+                <br/>
+                <div class="text-center" id="questionans3">3 answer here...</div>
+                <br/>
+                <div class="text-center" id="questionans4">4 answer here...</div>
+                <br/>
+                </div>
+              <div class="panel-footer">
+              <center><h5>It's all about the timer. Copyright 2017 - Awesome Learning Games Inc.</h5></center>
+              </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+</div>
